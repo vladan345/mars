@@ -1,0 +1,15 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 3rem;
+$text: 1.6rem;
+$main-color: rgba(38, 42, 85, 1);
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "home";
