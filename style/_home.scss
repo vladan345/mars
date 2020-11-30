@@ -115,6 +115,16 @@ nav {
     opacity: 1;
   }
 }
+@keyframes fadeInBottom2 {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes fadeInLeft {
   from {
     transform: translateX(-50px);
@@ -144,20 +154,12 @@ nav {
   }
 }
 
-@media only screen and (max-width: 910px) {
-  .hero-img img {
-    height: 30rem;
-  }
-}
 @media only screen and (max-width: 666px) {
   .hero-img img:nth-of-type(2) {
     display: none;
   }
-  .hero-img img:nth-of-type(1) {
-    animation: fadeInBottom 1s forwards;
-  }
   .hero-img {
-    min-height: 85vh;
+    height: 85vh;
     width: 100%;
     margin-top: 0;
     object-fit: cover;
@@ -168,7 +170,8 @@ nav {
     margin: 0;
     object-fit: cover;
     object-position: center;
-    animation: fadeInBottom 1s forwards;
+    animation: fadeInBottom2 1s forwards;
+    transform: translateY(50px);
   }
   .hero-text {
     min-height: 50vh;
