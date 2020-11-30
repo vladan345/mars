@@ -418,6 +418,10 @@ nav {
   .hero-img img:nth-of-type(2) {
     display: none;
   }
+  .hero-img img:nth-of-type(1) {
+    -webkit-animation: fadeInBottom 1s forwards;
+            animation: fadeInBottom 1s forwards;
+  }
   .hero-img {
     min-height: 85vh;
     width: 100%;
@@ -433,6 +437,8 @@ nav {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
+    -webkit-animation: fadeInBottom 1s forwards;
+            animation: fadeInBottom 1s forwards;
   }
   .hero-text {
     min-height: 50vh;
