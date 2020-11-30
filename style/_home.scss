@@ -15,6 +15,7 @@ nav {
 }
 #logo img {
   height: 50px;
+  animation: rotate 1.5s ease-in-out;
 }
 
 .hero {
@@ -28,15 +29,37 @@ nav {
   margin: 3rem 0 5rem 0;
   img {
     margin: 0 1.5rem;
+    opacity: 0;
+  }
+  img:nth-of-type(1) {
+    animation: fadeInLeft 1s forwards;
+  }
+  img:nth-of-type(2) {
+    animation: fadeInRight 1s forwards;
+    animation-delay: 0.5s;
   }
 }
+
 .hero-text {
   @include flex(flex-start, center, column);
+  h2 {
+    animation: fadeInBottom 1s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
   p {
-    margin: 3.5rem;
+    margin: 3rem;
     max-width: 60rem;
     text-align: center;
     color: $main-color;
+    animation: fadeInBottom 1s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+  }
+  a {
+    animation: fadeInBottom 1s forwards;
+    animation-delay: 2s;
+    opacity: 0;
   }
 }
 .categories {
@@ -79,6 +102,45 @@ nav {
   p {
     max-width: 60rem;
     margin: 3rem;
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
